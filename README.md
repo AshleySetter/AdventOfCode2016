@@ -1,4 +1,6 @@
-# AdventOfCode2016
+# Advent Of Code 2016
+
+This repository contains my solutions to the challanges posed at http://adventofcode.com/2016 and this README details the CPU run time of the code.
 
 ## Timing Analysis
 ### CPU Time per function call (the function completes the whole task)
