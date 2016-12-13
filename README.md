@@ -14,5 +14,5 @@ C was timed in the code using the clock function from the time.h header file and
 |Language      | Part1    | Part 2           | 
 |--------------|----------|------------------|
 | Python 3.5.2 | 829 μs   |                  |
-|    C         | 16.43 μs | 288 μs           |
+|    C         | 16.4 μs  | 288 μs           |
 
