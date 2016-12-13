@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
+#include <time.h>
+
+#define PI 3.14159265
 
 int countCommas(char* inputString){
   int NoOfCommas = 0;
@@ -29,7 +33,7 @@ void splitInstructions(char* Instructions, char* Delimiter, char* DirectionArray
     token = strtok(NULL, Delimiter);
     i++;
   }
-  DirectionArray[i-1] = '\0';
+  DirectionArray[i] = '\0';
 }
 
 float FindDistance(char *filename){
@@ -42,35 +46,70 @@ float FindDistance(char *filename){
   FILE* fp;
   int x = 0;
   int y = 0;
-  float AngleFromNorth;
+  int xvel = 0;
+  int yvel = 0;
+  float AngleFromNorth = 0;
+  int distance;
   
   Instructions = (char *) malloc(1000);
   fp = fopen(filename, "r");
   fgets(Instructions, 1000, fp);
   fclose(fp);
-  printf("%s \n", Instructions);
+  //printf("%s \n", Instructions);
   NumberOfCommas = countCommas(Instructions);
   NumberOfMovements = NumberOfCommas + 1;
-  DirectionArray = (char *) malloc(NumberOfMovements*sizeof(char));
+  DirectionArray = (char *) malloc(NumberOfMovements*(sizeof(char))+1); // extra byte to allow for zero terminator
   DistanceArray = (int *) malloc(NumberOfMovements*sizeof(int));
   splitInstructions(Instructions, Delimeter, DirectionArray, DistanceArray);
 
-  printf("%s\n", DirectionArray);
+  /*printf("%s\n", DirectionArray);
   for(int i=0; i<NumberOfMovements; i++){
     printf("%d ", DistanceArray[i]);
   }
-  printf("\n");
+  printf("\n");*/
 
-  
+  for (int j=0; j<NumberOfMovements; j++){
+    if (DirectionArray[j] == 'R') {
+      AngleFromNorth += PI/2;
+    }
+    else if (DirectionArray[j] == 'L') {
+      AngleFromNorth -= PI/2;
+    }
+    xvel = round(sin(AngleFromNorth));
+    yvel = round(cos(AngleFromNorth));
+    //printf("[%d, %d]\n", xvel, yvel);
+    x += DistanceArray[j]*xvel;
+    y += DistanceArray[j]*yvel;
+  }
+
+  //printf("[%d, %d]\n", x, y);
+
+  distance = abs(x) + abs(y);
   
   free(Instructions);
   free(DirectionArray);
   free(DistanceArray);
-  return 1.0;
+  return distance;
 }
 
 int main(){
+  int distance;
   char* filename = "input.txt";
-  FindDistance(filename);
+
+  clock_t StartTime;
+  clock_t EndTime;
+  double cpu_time;
+
+  StartTime = clock();
+  for (int i = 0 ; i < 100000 ; i++){
+    distance = FindDistance(filename);
+  }
+  EndTime = clock();
+
+  cpu_time = ((double) (EndTime - StartTime)) / CLOCKS_PER_SEC;
+  
+  printf("%d\n", distance);
+
+  printf("%f seconds for 100000 runs \n", cpu_time); 
   return 1;
 }
