@@ -15,4 +15,13 @@ C was timed in the code using the clock function from the time.h header file and
 |--------------|----------|------------------|
 | Python 3.5.2 | 829 μs   |                  |
 |    C         | 16.4 μs  | 288 μs           |
+| C (with -O3) |          |                  |
 
+### Day 2
+
+C++ code was complied with gcc version g++-5 (Homebrew gcc 5.3.0) 5.3.0
+
+|Language          | Part1    | Part 2           | 
+|------------------|----------|------------------|
+|    C++11         |          |                  |
+| C++11 (with -O3) |          |                  |
