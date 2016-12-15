@@ -100,8 +100,9 @@ int main(){
   clock_t EndTime;
   double cpu_time;
 
+  int NumRuns = 100000;
   StartTime = clock();
-  for (int i = 0 ; i < 100000 ; i++){
+  for (int i = 0 ; i < NumRuns ; i++){
     distance = FindDistance(filename);
   }
   EndTime = clock();
@@ -110,6 +111,6 @@ int main(){
   
   printf("%d\n", distance);
 
-  printf("%f seconds for 100000 runs \n", cpu_time); 
+  printf("%f seconds for 1 run averaged over %d runs \n", cpu_time/NumRuns, NumRuns); 
   return 1;
 }
