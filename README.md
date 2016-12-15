@@ -11,6 +11,9 @@ Python was timed in IPython 5.0.0 using the %timeit magic.
 
 C was timed in the code using the clock function from the time.h header file and was compiled with gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4).
 
+On Linux PC
+-----------
+
 |Language      | Part1    | Part 2           | 
 |--------------|----------|------------------|
 | Python 3.5.2 | 829 μs   |                  |
@@ -21,7 +24,10 @@ C was timed in the code using the clock function from the time.h header file and
 
 C++ code was complied with gcc version g++-5 (Homebrew gcc 5.3.0) 5.3.0
 
+On Macbook Air
+--------------
+
 |Language          | Part1    | Part 2           | 
 |------------------|----------|------------------|
-|    C++11         |          |                  |
-| C++11 (with -O3) |          |                  |
+|    C++11         | 55 μs    |                  |
+| C++11 (with -O3) | 26 μs    |                  |
