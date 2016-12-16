@@ -30,5 +30,5 @@ C++ code was complied with gcc version g++-5 gcc version 5.4.0 and was timed in 
 
 |Language          | Part1    | Part 2           | 
 |------------------|----------|------------------|
-|    C++11         | 14 ns    |   μs             |
-| C++11 (with -O2) | 12 ns    |   μs             |
+|    C++11         | 3.52 ms  |  4.6 ms          |
+| C++11 (with -O2) | 2.72 ms  |  3.9 ms          |

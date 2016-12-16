@@ -5,21 +5,22 @@
 #include <time.h>
 
 int main(){
-  std::string Filename = "input.txt";
-  std::ifstream InputFileStream(Filename);
-  std::string Line;
-  std::string SideLength;
-  int SideNo;
-  int LengthArray[3];
-  unsigned int NumOfTriangles = 0;
-
   clock_t StartTime;
   clock_t EndTime;
   double cpu_time;
-  int NumRuns = 100000000;
+  int NumRuns = 1;
 
+  unsigned int NumOfTriangles = 0;
   StartTime = clock();
   for (int i = 0 ; i < NumRuns ; i++){
+
+    std::string Filename = "input.txt";
+    std::ifstream InputFileStream(Filename);
+    std::string Line;
+    std::string SideLength;
+    int SideNo;
+    int LengthArray[3];
+
     while (std::getline(InputFileStream, Line)){
       std::istringstream LineStream(Line);
       SideNo = 0;
