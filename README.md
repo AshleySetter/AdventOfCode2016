@@ -26,3 +26,9 @@ C++ code was complied with gcc version g++-5 gcc version 5.4.0 and was timed in 
 |    C++11         | 29 μs    | 55  μs           |
 | C++11 (with -O2) |  6 μs    | 34  μs           |
 
+### Day 3
+
+|Language          | Part1    | Part 2           | 
+|------------------|----------|------------------|
+|    C++11         | 14 ns    |   μs             |
+| C++11 (with -O2) | 12 ns    |   μs             |
