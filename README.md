@@ -9,7 +9,7 @@ Python was timed in IPython 5.0.0 using the %timeit magic.
 
 C was timed in the code using the clock function from the time.h header file and was compiled with gcc version 5.4.0
 
-C++ code was complied with gcc version g++-5 gcc version 5.4.0
+C++ code was complied with gcc version g++-5 gcc version 5.4.0 and was timed in the same manor as C.
 
 ### Day 1
 
