@@ -16,15 +16,15 @@ C++ code was complied with gcc version g++-5 gcc version 5.4.0 and was timed in 
 |Language      | Part1    | Part 2           | 
 |--------------|----------|------------------|
 | Python 3.5.2 | 829 μs   |                  |
-|    C         | 16 μs    | 288 μs           |
-| C (with -O2) | 16 μs    | 54 μs            |   
+|    C         | 271 μs   | 452 μs           |
+| C (with -O2) | 117 μs   | 142 μs           |   
 
 ### Day 2
 
 |Language          | Part1    | Part 2           | 
 |------------------|----------|------------------|
-|    C++11         | 29 μs    | 55  μs           |
-| C++11 (with -O2) |  6 μs    | 34  μs           |
+|    C++11         | 54 μs    | 102 μs           |
+| C++11 (with -O2) | 26 μs    | 66 μs            |
 
 ### Day 3
 
