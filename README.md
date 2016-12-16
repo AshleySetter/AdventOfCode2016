@@ -9,7 +9,7 @@ This repository contains my solutions to the challanges posed at http://adventof
 
 Python was timed in IPython 5.0.0 using the %timeit magic.
 
-C was timed in the code using the clock function from the time.h header file and was compiled with gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4).
+C was timed in the code using the clock function from the time.h header file and was compiled with gcc version 5.4.0
 
 On Linux PC
 -----------
@@ -17,17 +17,16 @@ On Linux PC
 |Language      | Part1    | Part 2           | 
 |--------------|----------|------------------|
 | Python 3.5.2 | 829 μs   |                  |
-|    C         | 16.4 μs  | 288 μs           |
-| C (with -O3) |          |                  |
+|    C         | 16 μs    | 288 μs           |
+| C (with -O2) | 16 μs    | 54 μs            |   
 
 ### Day 2
 
-C++ code was complied with gcc version g++-5 (Homebrew gcc 5.3.0) 5.3.0
+C++ code was complied with gcc version g++-5 gcc version 5.4.0
 
-On Macbook Air
---------------
 
 |Language          | Part1    | Part 2           | 
 |------------------|----------|------------------|
-|    C++11         | 55 μs    |                  |
-| C++11 (with -O3) | 26 μs    |                  |
+|    C++11         | 29 μs    |                  |
+| C++11 (with -O2) |  6 μs    |                  |
+
