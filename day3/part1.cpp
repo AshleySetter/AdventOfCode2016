@@ -8,7 +8,7 @@ int main(){
   clock_t StartTime;
   clock_t EndTime;
   double cpu_time;
-  int NumRuns = 1;
+  int NumRuns = 1000;
 
   unsigned int NumOfTriangles = 0;
   StartTime = clock();
