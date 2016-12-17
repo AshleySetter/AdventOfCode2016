@@ -39,5 +39,5 @@ Timing is done from the begining of the main function to the end.
 
 |Language          | Part1    | Part 2           | 
 |------------------|----------|------------------|
-|    C++11         | 19 ms    |                  |
-| C++11 (with -O2) | 10 ms    |                  |
+|    C++11         | 19 ms    |  20 ms           |
+| C++11 (with -O2) | 10 ms    |  10 ms           |
