@@ -11,6 +11,8 @@ C was timed in the code using the clock function from the time.h header file and
 
 C++ code was complied with gcc version g++-5 gcc version 5.4.0 and was timed in the same manor as C.
 
+Timing is done from the begining of the main function to the end.
+
 ### Day 1
 
 |Language      | Part1    | Part 2           | 
@@ -30,5 +32,5 @@ C++ code was complied with gcc version g++-5 gcc version 5.4.0 and was timed in 
 
 |Language          | Part1    | Part 2           | 
 |------------------|----------|------------------|
-|    C++11         | 3.52 ms  |  4.6 ms          |
-| C++11 (with -O2) | 2.72 ms  |  3.9 ms          |
+|    C++11         | 1.9 ms   |  4.6 ms          |
+| C++11 (with -O2) | 1.5 ms   |  3.9 ms          |
