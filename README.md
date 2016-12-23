@@ -51,3 +51,14 @@ Timing is done from the begining of the main function to the end.
 
 ### Day 6
 
+|Language          | Part1    | Part 2           | 
+|------------------|----------|------------------|
+|    C++11         | 122 μs   | 123 μs           |
+| C++11 (with -O2) |  93 μs   |  95 μs           |
+
+### Day 7
+
+|Language          | Part1    | Part 2           | 
+|------------------|----------|------------------|
+|    C++11         |  μs   |  μs           |
+| C++11 (with -O2) |  μs   |  μs           |
