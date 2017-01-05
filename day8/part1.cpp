@@ -3,6 +3,9 @@
 #include <regex>
 #include <fstream>
 
+#include <unistd.h> // sleep functionality on unix
+
+
 #define SCREENWIDTH 50
 #define SCREENHEIGHT 6
 
@@ -63,7 +66,7 @@ int main(){
   clock_t EndTime;
   double cpu_time;
 
-  int NumRuns = 100;
+  int NumRuns = 1;
 
   StartTime = clock();
   for (timingI = 0 ; timingI < NumRuns ; timingI++){
@@ -103,8 +106,10 @@ int main(){
 	else if (match[1] == "column"){
 	  RotateColumn(Screen, std::stoi(match[2]), std::stoi(match[3]));
 	}
-      }      
-      //printScreen(Screen);
+      }
+      printScreen(Screen);
+      std::cout << "\e[A" << "\e[A" << "\e[A" << "\e[A" << "\e[A" << "\e[A";
+      usleep(50000);
     }
     printScreen(Screen);
     //std::cout << SumTotalPixels(Screen) << "\n";
