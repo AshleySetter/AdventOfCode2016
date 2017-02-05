@@ -131,8 +131,8 @@ Timing is done from the begining of the main function to the end.
 ### Day 18
 |Language          | Part1    | Part 2           | 
 |------------------|----------|------------------|
-|    C++11         |          |                  |
-| C++11 (with -O2) |          |                  |
+|    C++11         | 1.36 ms  | 13.8 s           |
+| C++11 (with -O2) | 74 μs    | 0.82 s           |
 
 ### Day 19
 |Language          | Part1    | Part 2           | 
